@@ -1,16 +1,16 @@
-# VoiceCart AI
+# VoiceCommander AI
 
 ## Voice-First Multilingual Grocery Shopping Application
 
 # Requirement Coverage
 
-The following table maps the requirements of the Voice Command Shopping Assistant project to their implementation in VoiceCart AI.
+The following table maps the requirements of the Voice Command Shopping Assistant project to their implementation in VoiceCommander AI.
 
-| Project Requirement | VoiceCart AI Implementation |
+| Project Requirement | VoiceCommander AI Implementation |
 |---|---|
 | Voice Command Recognition | Users can record complete grocery instructions using the microphone and process them as a single voice command. |
 | Natural Language Processing | The application processes transcribed text to identify intents, products, quantities, units, search requests, cart actions, budget commands, and navigation commands. |
-| Multilingual Support | VoiceCart AI supports English, Hindi, and Hinglish through Faster-Whisper transcription and client-side normalization rules. |
+| Multilingual Support | VoiceCommander AI supports English, Hindi, and Hinglish through Faster-Whisper transcription and client-side normalization rules. |
 | Add Items | Products can be added individually or as part of multi-item voice commands. |
 | Remove and Modify Items | Users can remove products, update quantities, and clear the cart through supported commands and application controls. |
 | Quantity Management | Numeric quantities, Hindi/Hinglish number words, and multiple grocery units such as kg, litre, bottle, packet, dozen, and carton are supported. |
@@ -64,7 +64,7 @@ Open the deployed application: https://voice-cart-ai-iota.vercel.app
 
 # Project Overview
 
-VoiceCart AI is a full-stack, voice-enabled grocery shopping application that allows users to interact with a grocery catalogue and shopping cart using natural spoken commands.
+VoiceCommander AI is a full-stack, voice-enabled grocery shopping application that allows users to interact with a grocery catalogue and shopping cart using natural spoken commands.
 
 The application is designed to accept grocery commands in:
 
@@ -75,7 +75,7 @@ The application is designed to accept grocery commands in:
 
 Instead of requiring the user to manually search for every product, the application records the user's complete voice command, sends the recorded audio to a Python backend, transcribes it using a local Faster-Whisper model, and then processes the resulting text through a client-side command parser.
 
-The parsed command is executed directly inside the application. Depending on the command, VoiceCart AI can:
+The parsed command is executed directly inside the application. Depending on the command, VoiceCommander AI can:
 
 - Add one or multiple products to the cart
 - Understand quantities and units
@@ -109,14 +109,14 @@ The project consists of two independently deployed applications:
 
 ## Backend API
 
-**https://voicecart-ai-qrgf.onrender.com**
+**https://VoiceCommander-ai-qrgf.onrender.com**
 
 The backend exposes the transcription service used by the deployed frontend.
 
 A deployed frontend requires the following environment variable:
 
 ```env
-VITE_API_URL=https://voicecart-ai-qrgf.onrender.com
+VITE_API_URL=https://VoiceCommander-ai-qrgf.onrender.com
 ```
 
 The application uses this value to send recorded audio to:
@@ -131,7 +131,7 @@ POST /api/transcribe
 
 Traditional grocery applications primarily depend on manual searching, typing, filtering, and repeated product selection.
 
-VoiceCart AI explores a voice-first interaction model in which a user can speak a complete grocery instruction naturally.
+VoiceCommander AI explores a voice-first interaction model in which a user can speak a complete grocery instruction naturally.
 
 For example:
 
@@ -177,7 +177,7 @@ The frontend records the complete audio session using the browser's `MediaRecord
 
 ## 2. English, Hindi and Hinglish Support
 
-VoiceCart AI supports three language modes:
+VoiceCommander AI supports three language modes:
 
 - Auto / Hinglish
 - English
@@ -602,7 +602,7 @@ The history page provides information such as:
 
 ## 20. Firebase Cloud Synchronization
 
-For authenticated non-guest users, VoiceCart AI synchronizes selected application data with Cloud Firestore.
+For authenticated non-guest users, VoiceCommander AI synchronizes selected application data with Cloud Firestore.
 
 The user document can store:
 
@@ -1071,7 +1071,7 @@ useUserStore.ts
 Production backend:
 
 ```text
-https://voicecart-ai-qrgf.onrender.com
+https://VoiceCommander-ai-qrgf.onrender.com
 ```
 
 ---
@@ -1085,7 +1085,7 @@ Example response:
 ```json
 {
   "status": "online",
-  "message": "VoiceCart multilingual backend is running",
+  "message": "VoiceCommander multilingual backend is running",
   "model": "small"
 }
 ```
@@ -1249,7 +1249,7 @@ Cloud synchronization failures are caught and logged so that the application doe
 # Project Structure
 
 ```text
-VoiceCart-AI/
+VoiceCommander-AI/
 │
 ├── public/
 │   └── assets/
@@ -1412,7 +1412,7 @@ VITE_API_URL=http://localhost:8000
 For the deployed production frontend:
 
 ```env
-VITE_API_URL=https://voicecart-ai-qrgf.onrender.com
+VITE_API_URL=https://VoiceCommander-ai-qrgf.onrender.com
 ```
 
 ---
@@ -1490,13 +1490,13 @@ The frontend and backend run as separate processes.
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Gaurav0405/VoiceCart-AI.git
+git clone https://github.com/Gaurav0405/VoiceCommander-AI.git
 ```
 
 Move into the project directory:
 
 ```bash
-cd VoiceCart-AI
+cd VoiceCommander-AI
 ```
 
 ---
@@ -1650,7 +1650,7 @@ npm run build
 The deployed frontend requires:
 
 ```env
-VITE_API_URL=https://voicecart-ai-qrgf.onrender.com
+VITE_API_URL=https://VoiceCommander-ai-qrgf.onrender.com
 ```
 
 ---
@@ -1662,7 +1662,7 @@ The FastAPI backend is deployed on Render.
 Production backend:
 
 ```text
-https://voicecart-ai-qrgf.onrender.com
+https://VoiceCommander-ai-qrgf.onrender.com
 ```
 
 The backend is started through Uvicorn.
@@ -2082,17 +2082,17 @@ git push origin main
 
 # Repository Information
 
-**Repository:** https://github.com/Gaurav0405/VoiceCart-AI
+**Repository:** https://github.com/Gaurav0405/VoiceCommander-AI
 
 **Frontend:** https://voice-cart-ai-iota.vercel.app
 
-**Backend:** https://voicecart-ai-qrgf.onrender.com
+**Backend:** https://VoiceCommander-ai-qrgf.onrender.com
 
 ---
 
 # Final Notes
 
-VoiceCart AI is a full-stack voice-first grocery shopping application built around a complete speech-to-action workflow.
+VoiceCommander AI is a full-stack voice-first grocery shopping application built around a complete speech-to-action workflow.
 
 The project combines:
 
