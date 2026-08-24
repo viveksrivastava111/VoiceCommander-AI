@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+*.log
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+.vercel/
+*.tsbuildinfo
